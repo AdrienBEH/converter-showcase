@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
     {
         path: 'converter',
-        loadComponent: () => import('./components/converter/converter.component').then(m => m.ConverterComponent)
+        loadComponent: () => import('./exchange-rate-info/converter/converter.component').then(m => m.ConverterComponent),
     },
     {
         path: '',
@@ -22,4 +22,4 @@ const routes: Routes = [
     exports: [RouterModule],
     imports: [RouterModule.forRoot(routes)],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
